@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redhunllef Leaderboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <img src="/static/redlogo.png" alt="Redhunllef Logo" class="bouncing-logo">
+    </header>
+    <main>
+        <section id="leaderboard">
+            <h1>Leaderboard</h1>
+            <div id="shuffle-leaderboard">
+                <h2>Shuffle.com Wagers</h2>
+                <div class="podium" id="shuffle-top-3"></div>
+                <div class="standings" id="shuffle-standings"></div>
+            </div>
+            <div id="chicken-leaderboard">
+                <h2>Chicken.gg Wagers</h2>
+                <div class="podium" id="chicken-top-3"></div>
+                <div class="standings" id="chicken-standings"></div>
+            </div>
+        </section>
+        {% if show_toggles %}
+        <section id="controls">
+            <h2>Admin Controls</h2>
+            <button class="button" onclick="toggleRace('shuffle')">Toggle Shuffle Race</button>
+            <button class="button" onclick="toggleRace('chicken')">Toggle Chicken Race</button>
+        </section>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Redhunllef Livestream. Built by GingrSnaps.</p>
+    </footer>
+    <script src="/static/script.js"></script>
+</body>
+</html>

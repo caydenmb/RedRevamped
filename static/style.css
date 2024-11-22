@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #000 url('/static/starry-background.jpg') repeat;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.bouncing-logo {
+    width: 200px;
+    margin: 20px auto;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.button {
+    background-color: #53fc18; /* Lime green */
+    color: #000; /* Black text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
